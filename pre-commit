@@ -10,14 +10,14 @@ do
     # if it is java file
     if [[ ${v} == *.java ]]
     then
-		echo "format" ${v} "in google-java-format style"
-		java -jar ${DIR}/google-java-format.jar -r -a "$RootDir/$v"
-		git add "$RootDir/$v"
+        echo "format" ${v} "in google-java-format style"
+        java -jar ${DIR}/google-java-format.jar -r -a "$RootDir/$v"
+        git add "$RootDir/$v"
     fi
     # if it is javascript file
     if [[ ${v} == *.js ]]
     then
-		js-beautify -r -n -j "$RootDir/$v"
+        js-beautify -r -n -j "$RootDir/$v"
         git add "$RootDir/$v"
     fi
 done
